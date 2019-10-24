@@ -1,0 +1,115 @@
+/**
+ * STYLES
+ *
+ * This is where we change the way our file looks 
+ * 
+ * ========================================================================= */
+
+
+
+/**
+ * TAG STYLES
+ *
+ * This section is for the styles for our tags like body, a, and p
+ * Remember when we make a rule for our tags the selector is  
+ *
+ * ------------------------------------------------------------------------- */
+
+body{
+    /* THIS REMOVES THE AKWARD 5PX BORDER IN ALL BROWSERS */
+    margin:0;
+    padding:0;
+
+    /* HERE WE COPY THE TYPE INFORMATION FROM GOOD */
+    font-family: 'Modak', cursive;
+    font-size: 2em;
+
+    /* HERE WE SET THE BASE COLOR OF THE SITE */
+    /* color can be one of the names found here: https://htmlcolorcodes.com/color-names/ */
+    background-color: aquamarine;
+
+    /* or they can be RGB values */
+    background-color: rgb(127, 255, 212);
+
+    /* or they can be HEX values */
+    background-color: #7FFFD4;
+
+
+}
+
+
+/* STYLES FOR OUR IMAGES */
+img{
+    /* TELL ALL OF OUR IMAGES WE DON'T WANT THEM TO BE BIGGER THAN THEIR CONTAINER */
+    max-width: 100%;
+}
+
+
+/* STYLES FOR OUR PARAGRAPH TAGS */
+p{
+
+}
+
+
+/* STYLES FOR OUR 'A' TAGS */
+a{
+    color: DarkRed;
+    text-decoration: none;
+}
+
+a:hover{
+
+    color: Goldenrod;
+
+}
+
+
+/**
+ * CLASS STYLES
+ *
+ * This section is for the styles for our tags like 'hero', 'story', and 'choices'
+ * remember that when we are styling a class the selector begins with a '.'
+ *
+ * ------------------------------------------------------------------------- */
+
+
+.hero{
+    /* HERE WE SET THE WIDTH OF OUR HERO IMAGE ON THE PAGE 'vw' UNITES ARE LIKE A PERCENT OF THE BROWSER WINDOW */
+    width: 30vw;
+
+    /* THIS IS USED TO SET THE MARGINS ON THE LEFT AND RIGTH TO THE SAME VALUE SO OUR ELEMENT IS CENTERED */
+    margin: auto;
+}
+
+.story{
+    /* HERE WE SET THE WIDTH OF OUR STORY */
+    width: 60vw;
+
+    /* THIS IS CENTERS THE STORY BOCK LIKE OUR HERO IMAGE */
+    margin: auto;
+}
+
+.choices{
+    width: 60vw;
+    margin: auto;
+
+    /* HERE WE ARE MAKING A GRID FOR OUR INDIVIDUAL CHOICES TO FOLLOW */
+    display: grid;
+    /* this grid will have three columns */
+    /* in this exmaple we are making the columns equal */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* and here we setting the heigth of the row */
+    grid-template-rows: 200px;
+    grid-column-gap: 20px;
+
+    padding-bottom: 40px;
+
+}
+
+.choice{
+
+    border-bottom: 5px solid LightCoral;
+
+    text-align: center;
+
+}
