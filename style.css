@@ -67,6 +67,10 @@ a:hover{
 
 }
 
+a.random_link{
+    cursor:pointer;
+}
+
 
 /**
  * CLASS STYLES
