@@ -110,6 +110,37 @@ a:hover{
 
 }
 
+
+.one_choice{
+    width: 20vw;
+    margin: auto;
+}
+
+.two_choices{
+    width: 40vw;
+    margin: auto;
+
+    display: grid;
+    /* this grid will have two columns */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 200px;
+    grid-column-gap: 50px;
+    padding-bottom: 50px;
+}
+
+.three_choices{
+    width: 60vw;
+    margin: auto;
+
+    display: grid;
+    /* this grid will have three columns */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 200px;
+    grid-column-gap: 50px;
+    padding-bottom: 50px;
+}
+
+
 .choice{
 
     border-bottom: 5px solid LightCoral;
