@@ -68,6 +68,7 @@ a:hover{
 }
 
 a.random_link{
+    /* makes our random links have the same cursor as the normal links */
     cursor:pointer;
 }
 
@@ -121,7 +122,7 @@ a.random_link{
 }
 
 .two_choices{
-    width: 40vw;
+    width: 60vw;
     margin: auto;
 
     display: grid;
