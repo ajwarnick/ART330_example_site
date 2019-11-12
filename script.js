@@ -63,24 +63,7 @@ if( document.querySelector('.cookie') ){
 
     });
 
-
-
-    // get data atributes 
-
-    // add click to action
-
-    // add cookie 
-
-    // reset
-
-    // test test test
-
-    // if on a only do on click or if it is on anyother element do on load 
 }
-
-
-
-
 
 
 
@@ -102,34 +85,30 @@ document.querySelectorAll('.random_link').forEach(function(random_link) {
 
 
 
-// this is the content input out put stuff !!!
-
-let editable = document.getElementById('textInput');
-let output = document.getElementById('textOutput');
-
-// These are the variable you will need
-let magicPhrase = "web";
-let name = "Your name does not match any in our system";
-
-
 if( document.querySelector('.text_io') ){
+    let output;
+    
+    document.querySelectorAll('.text_io').forEach( function(obj) {
+        if(obj.classList.contains('output')){
+            output = obj;
+        }
 
-    // if the editable feild is present we add an event listener 
-    if ( editable ){ 
-        // This happend each time the text in the textInput changes
-        editable.addEventListener('input', function() {
-            //console.log(editable.innerHTML);
-            if( editable.innerHTML.includes(magicPhrase) ){
-                // This happens if the magicPhrase is in the text typed
-                output.innerHTML = "";
-                //this takes you to a new page
-                window.location.href = '/index.html';
-            }else{
-                output.innerHTML = name;
-            }
-        });
-    }
 
+        if(obj.classList.contains('input')){
+            let pass = obj.dataset.password;
+            let destination = obj.dataset.destination;
+            let message = obj.dataset.message;
+
+            obj.addEventListener('input', function(e){
+                if(obj.innerText == pass){
+                    // console.log("hit");
+                    // Forward to desination
+                    window.location.href = destination;
+                }else{
+                    // send message to output
+                    output.innerHTML = message;
+                }
+            });
+        }
+    });
 }
-
-

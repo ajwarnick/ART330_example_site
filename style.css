@@ -108,6 +108,14 @@ a[data-destination] {
     zoom: 1 ; /* IE < 8 */
 } 
 
+/* MY IMPUT STYLE TO LOOK LIKE AN INPUT FEILD */
+.input{
+    border: 5px solid black;
+
+    width: 200px;
+    height: 1em;
+    padding-bottom: 5px;
+}
 
 /* MY CLASSES */
 
