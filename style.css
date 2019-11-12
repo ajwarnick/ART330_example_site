@@ -141,26 +141,37 @@ a[data-destination] {
 }
 
 .two_choices{
-    width: 60vw;
+    /* This container is 40% of the browser width */
+    width: 40vw;
+    /* This will center the container */
     margin: auto;
 
+    /* HERE WE ARE MAKING A GRID FOR OUR INDIVIDUAL CHOICES TO FOLLOW */
     display: grid;
     /* this grid will have two columns */
+    /* in this exmaple we are making the columns equal */
     grid-template-columns: 1fr 1fr;
+    /* and here we setting the heigth of the row */
     grid-template-rows: 200px;
     grid-column-gap: 50px;
     padding-bottom: 50px;
 }
 
 .three_choices{
+    /* This container is 60% of the browser width */
     width: 60vw;
+    /* This will center the container */
     margin: auto;
 
+    /* HERE WE ARE MAKING A GRID FOR OUR INDIVIDUAL CHOICES TO FOLLOW */
     display: grid;
     /* this grid will have three columns */
+    /* in this exmaple we are making the columns equal */
     grid-template-columns: 1fr 1fr 1fr;
+    /* and here we setting the heigth of the row */
     grid-template-rows: 200px;
     grid-column-gap: 50px;
+
     padding-bottom: 50px;
 }
 
