@@ -99,3 +99,37 @@ document.querySelectorAll('.random_link').forEach(function(random_link) {
     })
 });
 
+
+
+
+// this is the content input out put stuff !!!
+
+let editable = document.getElementById('textInput');
+let output = document.getElementById('textOutput');
+
+// These are the variable you will need
+let magicPhrase = "web";
+let name = "Your name does not match any in our system";
+
+
+if( document.querySelector('.text_io') ){
+
+    // if the editable feild is present we add an event listener 
+    if ( editable ){ 
+        // This happend each time the text in the textInput changes
+        editable.addEventListener('input', function() {
+            //console.log(editable.innerHTML);
+            if( editable.innerHTML.includes(magicPhrase) ){
+                // This happens if the magicPhrase is in the text typed
+                output.innerHTML = "";
+                //this takes you to a new page
+                window.location.href = '/index.html';
+            }else{
+                output.innerHTML = name;
+            }
+        });
+    }
+
+}
+
+
