@@ -135,23 +135,6 @@ a[data-destination] {
     margin: auto;
 }
 
-.choices{
-    width: 60vw;
-    margin: auto;
-
-    /* HERE WE ARE MAKING A GRID FOR OUR INDIVIDUAL CHOICES TO FOLLOW */
-    display: grid;
-    /* this grid will have three columns */
-    /* in this exmaple we are making the columns equal */
-    grid-template-columns: 1fr 1fr 1fr;
-    /* and here we setting the heigth of the row */
-    grid-template-rows: 200px;
-    grid-column-gap: 50px;
-
-    padding-bottom: 50px;
-
-}
-
 .one_choice{
     width: 20vw;
     margin: auto;
