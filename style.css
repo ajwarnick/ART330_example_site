@@ -48,7 +48,7 @@ img{
 
 /* STYLES FOR OUR PARAGRAPH TAGS */
 p{
-
+    margin: 0;
 }
 
 
@@ -72,6 +72,11 @@ a.random_link{
     cursor:pointer;
 }
 
+/* any a tag with a 'data-destination' will have the same cursor as a typical a tag */
+a[data-destination] {
+    cursor: pointer;
+}
+
 
 /**
  * CLASS STYLES
@@ -81,6 +86,30 @@ a.random_link{
  *
  * ------------------------------------------------------------------------- */
 
+
+
+ /* UTILITY CLASSES  */
+
+.none{
+    display: none;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: ".";    
+    display: block;    
+    height: 0;    
+    overflow: hidden;        
+}
+.clearfix:after { 
+    clear: both; 
+}
+.clearfix { 
+    zoom: 1 ; /* IE < 8 */
+} 
+
+
+/* MY CLASSES */
 
 .hero{
     /* HERE WE SET THE WIDTH OF OUR HERO IMAGE ON THE PAGE 'vw' UNITES ARE LIKE A PERCENT OF THE BROWSER WINDOW */
@@ -115,7 +144,6 @@ a.random_link{
 
 }
 
-
 .one_choice{
     width: 20vw;
     margin: auto;
@@ -144,7 +172,6 @@ a.random_link{
     grid-column-gap: 50px;
     padding-bottom: 50px;
 }
-
 
 .choice{
 

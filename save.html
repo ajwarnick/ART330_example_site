@@ -11,6 +11,12 @@
 
     </head>
     <body class="gray">
+        <!-- SETS VALUE BUT NO ACTION IS REQUIRED -->
+        <!-- ONE NEEDS TO USE THE CLASS COOKIE ANY TIME YOU WILL BE SETTING OR USING A SAVED VALUE -->
+        <!-- IN THE 'data-name' ONE NAMES THE VALUE KEY YOU WANT TO USE OR SAVE -->
+        <!-- AND SET THE 'data-value' TO THE NEW VALUE YOU WANT TO STORE WITH THAT VALUE -->
+        <a class="cookie" data-name="health" data-value="2"></a>
+
         <div id="main">
             <div class="hero">
                 <img src="/img/Space-12.png" alt="happy sun">
@@ -19,10 +25,21 @@
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. In gravida quis nibh vitae pellentesque. In bibendum ac ipsum sed tempor. Aenean tristique fermentum leo, nec venenatis sapien pulvinar et. Nulla eget rhoncus felis, auctor imperdiet ipsum. Aliquam a rutrum nulla. Vestibulum varius erat mi, vitae finibus arcu fringilla a. Mauris semper ante nec libero fermentum facilisis. Phasellus laoreet tellus sed justo consequat varius. Integer at metus venenatis metus finibus euismod. Quisque consectetur et nibh lobortis pulvinar.
                 </p>
+
+                <!-- DISPLAYS VALUE -->
+                <a class="cookie" data-name="health" data-display="true"></a>
+
+                <!-- SHOW HIDDEN CONTAINER -->
+                <div class="none cookie" data-name="health" data-threshold="2">
+                    Secret !!
+                </div>
             </div>
             <div class="one_choice">
                 <div class="choice">
-                    <a class="cookie" data-name="health" data-destination="/moon.html" data-effect="+1">
+
+                    <!-- 'data-effect' CAN HAVE MATHEMATICAL OPERATIONS + (addition), - (subtraction), * (multiplication), and / (division) OR CAN BE 'reset' -->
+                    <!-- 'data-destination' WILL CREATE A CLICK EVENT TO TAKE THE USER TO THAT DESINATION ON CLICK -->
+                    <a class="cookie" data-name="health" data-destination="/moon.html" data-effect="reset" >
                         SAVE
                     </a>
                 </div>

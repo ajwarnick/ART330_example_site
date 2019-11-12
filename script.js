@@ -8,20 +8,57 @@ console.log("ART330 Script v1.2 Loaded");
 
 // section to save stats etc.
 if( document.querySelector('.cookie') ){
-    console.log("cookie found");
 
     document.querySelectorAll('.cookie').forEach(function(obj) {
         
         // Now do something with my button
         if( cookie.get( obj.dataset.name ) ){
+            // if cookie exist and has value set that equal to varable cookieValue
             let cookieValue = cookie.get(obj.dataset.name);
-            // console.log(eval('2 + 2'));
-            cookiehNumber = eval(cookieValue + "+1");
-            console.log(cookiehNumber);
-            cookie.set('health', cookiehNumber)
+
+            if( obj.dataset.display ){
+                // if 'data-disply' is true than the cookie value is inserted to that element                 
+                obj.innerHTML = cookieValue;
+            }else{
+
+                if(obj.dataset.threshold){
+                    if( Number(cookieValue) > Number(obj.dataset.threshold) ){
+                        // if there is a show threshold and the cookie value is great than it reveal the element 
+                        obj.classList.toggle('none');
+                    }
+                }
+
+                if(obj.dataset.value){
+                    cookie.set(obj.dataset.name, obj.dataset.value);
+                }
+
+                if(obj.dataset.destination && obj.dataset.effect){
+                    // if the element has a destination add a click event to exicute that on click
+                    obj.addEventListener("click", function(){
+                        if(obj.dataset.effect == "reset"){
+                            cookie.set(obj.dataset.name, "");
+                        }else{
+                            cookiehNumber = eval(cookieValue + obj.dataset.effect);
+                            cookie.set(obj.dataset.name, cookiehNumber);
+                        }
+                        window.location.href = obj.dataset.destination
+                    }); 
+                }else if(obj.dataset.effect){
+                    
+                    if(obj.dataset.effect == "reset"){
+                        cookie.set(obj.dataset.name, "");
+                    }else{
+                        cookiehNumber = eval(cookieValue + obj.dataset.effect);
+                        cookie.set(obj.dataset.name, cookiehNumber);
+                    }
+                    
+                }
+
+            }
+
         }else{
             // get the vlaue and set that
-            cookie.set(obj.dataset.name, 1)
+            cookie.set(obj.dataset.name, 1);
         }
 
     });
