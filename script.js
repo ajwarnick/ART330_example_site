@@ -1,4 +1,12 @@
 console.log("ART330 Script v1.2 Loaded");
+
+/*     art330 javascript 1.2.0
+ *
+ *     (c) 2019 Anthony Warnick
+ *     jquery-comments may be freely distributed under the MIT license.
+ *     For all details and documentation:
+ *     https://github.com/ajwarnick/ART330_example_site
+ */
  
 
 // Copyright (c) 2015 Florian Hartmann, https://github.com/florian https://github.com/florian/cookie.js
@@ -51,18 +59,13 @@ if( document.querySelector('.cookie') ){
                         cookiehNumber = eval(cookieValue + obj.dataset.effect);
                         cookie.set(obj.dataset.name, cookiehNumber);
                     }
-                    
                 }
-
             }
-
         }else{
             // get the vlaue and set that
             cookie.set(obj.dataset.name, 1);
         }
-
     });
-
 }
 
 
@@ -76,7 +79,6 @@ document.querySelectorAll('.random_link').forEach(function(random_link) {
         // We get the number of links and roll a dice of that many sides
         let number_of_links = Object.keys(data).length;
         let dice_roll = Math.floor(Math.random() * Math.floor(number_of_links));
-
         // we send the window to the rolled link
         window.location.href = Object.values(data)[dice_roll]
     })
@@ -84,7 +86,7 @@ document.querySelectorAll('.random_link').forEach(function(random_link) {
 
 
 
-
+// This will select the text input and output fields 
 if( document.querySelector('.text_io') ){
     let output;
     
@@ -92,7 +94,6 @@ if( document.querySelector('.text_io') ){
         if(obj.classList.contains('output')){
             output = obj;
         }
-
 
         if(obj.classList.contains('input')){
             let pass = obj.dataset.password;
